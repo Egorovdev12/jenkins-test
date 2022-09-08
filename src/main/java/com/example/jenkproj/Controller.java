@@ -12,4 +12,9 @@ public class Controller {
     public List<String> hello() {
         return List.of("Hello", ", World!");
     }
+
+    @GetMapping
+    public List<String> rushello() {
+        return List.of("Zdarova!", "Privet!", "Zdravstvuy!");
+    }
 }
