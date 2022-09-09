@@ -13,7 +13,7 @@ public class Controller {
         return List.of("Hello", ", World!");
     }
 
-    @GetMapping
+    @GetMapping("/rushello")
     public List<String> rushello() {
         return List.of("Zdarova!", "Privet!", "Zdravstvuy!");
     }
