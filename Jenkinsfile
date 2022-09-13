@@ -13,7 +13,8 @@ pipeline() {
         }
         stage('Maven') {
             steps {
-            bat 'mvn clean install'
+            bat 'mvn clean'
+            bat 'mvn package'
             echo "project has been packaged"
             }
         }
