@@ -1,0 +1,6 @@
+services:
+  testapp1:
+    image: 'jenktest:latest'
+    container_name: 'jenkapp1'
+    ports:
+      - 9100:9090

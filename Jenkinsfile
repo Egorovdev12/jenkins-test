@@ -19,6 +19,16 @@ pipeline() {
             echo "Project has been packaged"
             }
         }
+        stage('Create docker image') {
+            steps {
+                bat 'docker build -t jenktest:latest .'
+            }
+        }
+        stage('Run app in container') {
+            steps {
+                bat 'docker-compose up -d'
+            }
+        }
 
     }
 
