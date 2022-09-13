@@ -6,16 +6,17 @@ pipeline() {
     agent any
 
     stages {
-        stage('MyFirstStep') {
-            steps {
-            echo "Preparing project..."
-            }
-        }
-        stage('Maven') {
+        stage('Tests') {
             steps {
             bat 'mvn clean'
+            bat 'mvn tests'
+            echo "Testing project..."
+            }
+        }
+        stage('Package to jar') {
+            steps {
             bat 'mvn package'
-            echo "project has been packaged"
+            echo "Project has been packaged"
             }
         }
 
