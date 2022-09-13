@@ -8,9 +8,13 @@ pipeline() {
     stages {
         stage('MyFirstStep') {
             steps {
-            echo "start AFJNAJN 1"
-            echo "start AFJNAJN 2"
-            echo "start AFJNAJN 3"
+            echo "Preparing project..."
+            }
+        }
+        stage('Maven') {
+            steps {
+            bat 'mvn clean install'
+            echo "project has been packaged"
             }
         }
 
